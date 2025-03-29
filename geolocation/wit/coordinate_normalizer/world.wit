@@ -1,0 +1,22 @@
+package geoloc:coordnorm@0.1.0;
+
+interface coordnorm {
+  record Coordinates {
+    latitude: float64,
+    longitude: float64,
+  }
+
+  record NormalizedCoordinates {
+    latitude: float64,
+    longitude: float64,
+    valid: bool,
+  }
+
+  import normalize: func(coords: Coordinates) -> NormalizedCoordinates;
+}
+
+world coordinatenormalizer {
+    export coordnorm;
+}
+
+my-namespace:component1/component1-interface@0.1.0;
