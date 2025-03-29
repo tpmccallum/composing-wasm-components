@@ -1,0 +1,18 @@
+package docs:normalizer@0.1.0;
+
+interface normalize {
+    record coordinates {
+        latitude: f64,
+        longitude: f64,
+    }
+    record normalized-coordinates {
+        latitude: f64,
+        longitude: f64,
+        valid: bool,
+    }
+    normalize: func(coords: coordinates) -> normalized-coordinates;
+}
+
+world normalizer {
+    export normalize;
+}

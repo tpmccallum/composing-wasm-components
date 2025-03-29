@@ -1,0 +1,16 @@
+[package]
+name = "dms-converter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wit-bindgen-rt = "0.41.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "docs:converter"
+
+[package.metadata.component.target.dependencies]
+"docs:normalizer" = { path = "../coordinate-normalizer/wit" }

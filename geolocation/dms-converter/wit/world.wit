@@ -1,0 +1,24 @@
+package docs:converter@0.1.0;
+
+interface convert {
+    record dms {
+        degrees: u32,
+        minutes: u32,
+        seconds: f64,
+        direction: string,
+    }
+    record dms-coordinates {
+        latitude: dms,
+        longitude: dms,
+    }
+    convert-to-dms: func(normalized: docs:normalizer/normalize/normalized-coordinates) -> dms-coordinates;
+}
+
+world converter {
+    export convert;
+    import docs:normalizer/normalize@0.1.0;
+}
+
+world display {
+    import convert;
+}

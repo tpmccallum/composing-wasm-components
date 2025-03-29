@@ -1,9 +1,0 @@
-package geoloc:coord-disp@0.1.0;
-
-interface coord-disp {
-  import display: func(dms: geoloc:dms-conv/dms-conv.DMSCoordinates);
-}
-
-world coordinate-display {
-    import geoloc:dms-conv/dms-conv;
-}
