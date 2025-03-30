@@ -3,6 +3,7 @@
 ## Build the components
 
 ```bash
+cd geolocation
 echo "Building coordinate-normalizer..."
 cd coordinate-normalizer
 cargo component build --target wasm32-wasip1 --release
