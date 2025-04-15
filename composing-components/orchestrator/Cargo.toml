@@ -12,5 +12,5 @@ crate-type = ["cdylib"]
 [package.metadata.component]
 package = "docs:orchestrator"
 
-[package.metadata.component.target.dependencies]
-"docs:string-processor" = { path = "/Users/tpmccallum/deleteme/string-processor" }
+[package.metadata.component.dependencies]
+"docs:string-processor" = { path = "../string-processor" }
