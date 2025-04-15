@@ -1,0 +1,10 @@
+package docs:orchestrator;
+
+interface greeting {
+    create-greeting: func(name: string) -> string;
+}
+
+world orchestrator {
+    export greeting;
+    import docs:string-processor/processor;
+}

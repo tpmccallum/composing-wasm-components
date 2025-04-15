@@ -1,0 +1,9 @@
+package docs:string-processor;
+
+interface processor {
+    reverse: func(input: string) -> string;
+}
+
+world string-processor {
+    export processor;
+}
